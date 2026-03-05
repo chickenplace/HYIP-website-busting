@@ -4,11 +4,11 @@ FLAGS = re.IGNORECASE | re.MULTILINE
 
 PATTERNS = {
     "cryptolang": re.compile(
-        r'(crypto|btc|eth|usdt|usdc|bnb|trx|xrp|doge|sol|defi|nft|mining|stake|staking|yield|profit|income|invest|loan|capital|fund)', 
+        r'(crypto|btc|eth|usdt|usdc|bnb|trx|xrp|doge|sol|defi|nft|mining|stake|staking|yield|profit|income|invest|loan|capital|fund|coin)', 
         FLAGS
     ),
     "hyiplang": re.compile(
-        r'(double|bonus|reward|daily|weekly|roi|guarantee|secure|fast|instant|passive|forex|trading|robot|ai|bot|signal)',
+        r'(double|bonus|reward|daily|weekly|roi|guarantee|secure|fast|instant|passive|forex|trading|robot|ai|bot|signal|money)',
         FLAGS
     ),
     "brand_impersonation": re.compile(
