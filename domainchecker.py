@@ -36,6 +36,29 @@ def scan_domain(domain: str) -> dict:
                 results[name] = matches 
     return results if results else None
 
+def scan_domain_file(filename):
+    count = 0
+    with open(filename, "r") as f:
+        for line in f:
+            domain = line.strip()
+
+            # skip empty lines
+            if not domain:
+                continue
+
+            hits = scan_domain(domain)
+
+            # only show suspicious ones
+            if hits:
+                print(f"[!] {domain}")
+                print(hits)
+                print("-" * 40)
+                with open("suspicious_domains.txt", "a") as out:
+                    out.write(f"{domain}\n")
+                count += 1
+
+    print(f"Total suspicious domains found: {count}")
+
 if __name__ == "__main__":
     test_domains = [
         "bestcrypto2024.com",
@@ -52,6 +75,9 @@ if __name__ == "__main__":
         "gooelg.com"
     ]
 
+    scan_domain_file("domain-names.txt")
+
+'''
     for d in test_domains:
         d = d.lower()
         d = re.sub(r"<[^>]+>", " ", d)  # strip HTML
@@ -60,3 +86,4 @@ if __name__ == "__main__":
         results = scan_domain(domain)
         if results:
             print(results)
+'''
