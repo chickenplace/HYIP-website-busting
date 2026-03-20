@@ -1,6 +1,6 @@
 x = 2
 
-def make_subtractor(n):
+def make_subtractor(n): #M
     return lambda x:x-n
 
 sub3 = make_subtractor(3)

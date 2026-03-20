@@ -8,7 +8,7 @@ PATTERNS = {
         FLAGS
     ),
     "hyiplang": re.compile(
-        r'(double|bonus|reward|daily|weekly|roi|guarantee|secure|fast|instant|passive|forex|trading|robot|ai|bot|signal|money)',
+        r'(double|bonus|reward|daily|weekly|roi|guarantee|secure|fast|instant|passive|forex|trading|robot|ai|bot|signal|money|trader|trade)',
         FLAGS
     ),
     "brand_impersonation": re.compile(

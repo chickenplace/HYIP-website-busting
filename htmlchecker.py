@@ -34,7 +34,8 @@ SCAM_PATTERNS = {
     "mining": 2,
     "earn": 2,
     "minimum deposit": 2,
-    "weekly return": 2
+    "weekly return": 2,
+    "future": 1
 
 }
 
